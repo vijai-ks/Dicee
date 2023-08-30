@@ -22,16 +22,19 @@ class Dicee extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Image(
-                      image: AssetImage('images/dice1.png'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Image(
+                        image: AssetImage('images/dice1.png'),
+                      ),
                     ),
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
                   Expanded(
-                    child: Image(
-                      image: AssetImage('images/dice2.png'),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Image(
+                        image: AssetImage('images/dice2.png'),
+                      ),
                     ),
                   ),
                 ],
