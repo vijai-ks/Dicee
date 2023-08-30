@@ -4,7 +4,12 @@ void main() {
   runApp(Dicee());
 }
 
-class Dicee extends StatelessWidget {
+class Dicee extends StatefulWidget {
+  @override
+  _DiceeState createState() => _DiceeState();
+}
+
+class _DiceeState extends State<Dicee> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
