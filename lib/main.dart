@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(Dicee());
@@ -10,6 +11,16 @@ class Dicee extends StatefulWidget {
 }
 
 class _DiceeState extends State<Dicee> {
+  int firstDice = 1;
+  int secondDice = 1;
+
+  void generateRandomNumber() {
+    setState(() {
+      firstDice = Random().nextInt(5) + 1;
+      secondDice = Random().nextInt(5) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,20 +40,20 @@ class _DiceeState extends State<Dicee> {
                   Expanded(
                     child: FlatButton(
                       onPressed: () {
-                        print("Clicked 1");
+                        generateRandomNumber();
                       },
                       child: Image(
-                        image: AssetImage('images/dice1.png'),
+                        image: AssetImage('images/dice$firstDice.png'),
                       ),
                     ),
                   ),
                   Expanded(
                     child: FlatButton(
                       onPressed: () {
-                        print('Pressed 2');
+                        generateRandomNumber();
                       },
                       child: Image(
-                        image: AssetImage('images/dice2.png'),
+                        image: AssetImage('images/dice$secondDice.png'),
                       ),
                     ),
                   ),
