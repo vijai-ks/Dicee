@@ -22,16 +22,20 @@ class Dicee extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
+                    child: FlatButton(
+                      onPressed: () {
+                        print("Clicked 1");
+                      },
                       child: Image(
                         image: AssetImage('images/dice1.png'),
                       ),
                     ),
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
+                    child: FlatButton(
+                      onPressed: () {
+                        print('Pressed 2');
+                      },
                       child: Image(
                         image: AssetImage('images/dice2.png'),
                       ),
