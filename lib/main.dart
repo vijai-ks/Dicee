@@ -34,31 +34,71 @@ class _DiceeState extends State<Dicee> {
         ),
         body: SafeArea(
           child: Container(
-            child: Center(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: FlatButton(
-                      onPressed: () {
-                        generateRandomNumber();
-                      },
-                      child: Image(
-                        image: AssetImage('images/dice$firstDice.png'),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: FlatButton(
+                        onPressed: () {
+                          generateRandomNumber();
+                        },
+                        child: Image(
+                          image: AssetImage('images/dice$firstDice.png'),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    child: FlatButton(
-                      onPressed: () {
-                        generateRandomNumber();
-                      },
-                      child: Image(
-                        image: AssetImage('images/dice$secondDice.png'),
+                    Expanded(
+                      child: FlatButton(
+                        onPressed: () {
+                          generateRandomNumber();
+                        },
+                        child: Image(
+                          image: AssetImage('images/dice$secondDice.png'),
+                        ),
                       ),
                     ),
+                  ],
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 300,
+                  child: Divider(
+                    thickness: 2,
+                    color: Colors.white,
                   ),
-                ],
-              ),
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          '$firstDice',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          '$secondDice',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
